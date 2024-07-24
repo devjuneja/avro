@@ -153,6 +153,7 @@ func (w *Writer) WriteBytes(b []byte) {
 
 // WriteString reads a String to the Writer.
 func (w *Writer) WriteString(s string) {
+	fmt.Println("WDBUG: Writer string:", s)
 	w.WriteLong(int64(len(s)))
 	w.buf = append(w.buf, s...)
 }
